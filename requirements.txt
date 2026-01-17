@@ -1,0 +1,20 @@
+# Basic libraries used in notebook
+numpy
+pandas
+pyyaml
+
+# Computer vision
+opencv-python
+pillow
+
+# Deep learning
+torch
+torchvision
+
+# YOLOv12 framework (installed directly from GitHub)
+git+https://github.com/sunsmarterjie/yolov12.git
+
+
+# Optional but recommended
+tqdm
+matplotlib
