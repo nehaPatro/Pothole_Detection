@@ -1,20 +1,18 @@
-# Basic libraries used in notebook
+# Core
+streamlit
 numpy
 pandas
 pyyaml
-
-# Computer vision
-opencv-python
 pillow
+tqdm
+matplotlib
+
+# Computer vision (Streamlit-safe)
+opencv-python-headless
 
 # Deep learning
 torch
 torchvision
 
-# YOLOv12 framework (installed directly from GitHub)
+# YOLOv12 (GitHub install)
 git+https://github.com/sunsmarterjie/yolov12.git
-
-
-# Optional but recommended
-tqdm
-matplotlib
