@@ -9,7 +9,7 @@ numpy
 pyyaml
 tqdm
 
-# Interface (choose one)
+# Interface
 gradio
 
 # YOLOv12 repository
