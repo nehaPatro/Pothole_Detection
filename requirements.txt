@@ -1,18 +1,16 @@
-# Core
-streamlit
-numpy
-pandas
-pyyaml
-pillow
-tqdm
-matplotlib
-
-# Computer vision (Streamlit-safe)
-opencv-python-headless
-
-# Deep learning
+# Core ML
 torch
 torchvision
 
-# YOLOv12 (GitHub install)
+# Computer vision
+opencv-python-headless
+pillow
+numpy
+pyyaml
+tqdm
+
+# Interface (choose one)
+gradio
+
+# YOLOv12 repository
 git+https://github.com/sunsmarterjie/yolov12.git
