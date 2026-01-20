@@ -6,3 +6,5 @@ numpy
 pyyaml
 tqdm
 gradio
+
+git+https://github.com/sunsmarterjie/yolov12.git
