@@ -1,16 +1,8 @@
-# Core ML
 torch
 torchvision
-
-# Computer vision
 opencv-python-headless
 pillow
 numpy
 pyyaml
 tqdm
-
-# Interface
 gradio
-
-# YOLOv12 repository
-git+https://github.com/sunsmarterjie/yolov12.git

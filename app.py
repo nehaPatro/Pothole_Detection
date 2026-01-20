@@ -1,15 +1,15 @@
+import os
 import gradio as gr
 import numpy as np
 import cv2
 from PIL import Image
 import torch
 
-# YOLOv12 imports
 from yolov12.models.common import DetectMultiBackend
 from yolov12.utils.general import non_max_suppression, scale_boxes
 from yolov12.utils.torch_utils import select_device
 
-# Load model
+
 def load_model():
     device = select_device("cpu")
 
@@ -29,7 +29,6 @@ model, device = load_model()
 def predict(image):
     img0 = np.array(image)
 
-    # preprocess
     img = cv2.resize(img0, (640, 640))
     img = img.transpose((2, 0, 1))
     img = np.ascontiguousarray(img)
@@ -37,11 +36,9 @@ def predict(image):
     img = torch.from_numpy(img).to(device).float() / 255.0
     img = img.unsqueeze(0)
 
-    # inference
     pred = model(img)
     pred = non_max_suppression(pred, conf_thres=0.25, iou_thres=0.45)
 
-    # draw boxes
     for det in pred:
         if len(det):
             det[:, :4] = scale_boxes(img.shape[2:], det[:, :4], img0.shape).round()
@@ -69,7 +66,6 @@ demo = gr.Interface(
     inputs=gr.Image(type="pil"),
     outputs=gr.Image(type="pil"),
     title="Pothole Detection using YOLOv12",
-    description="Upload a road image to detect potholes",
 )
 
-demo.launch()
+demo.launch(server_name="0.0.0.0", server_port=7860)
